@@ -1,0 +1,10 @@
+C:\Users\KotikA\Source\Repos\AsyncSample\AsyncSample\bin\Debug\AsyncSample.exe.config
+C:\Users\KotikA\Source\Repos\AsyncSample\AsyncSample\bin\Debug\AsyncSample.exe
+C:\Users\KotikA\Source\Repos\AsyncSample\AsyncSample\bin\Debug\AsyncSample.pdb
+C:\Users\KotikA\Source\Repos\AsyncSample\AsyncSample\obj\Debug\AsyncSample.Properties.Resources.resources
+C:\Users\KotikA\Source\Repos\AsyncSample\AsyncSample\obj\Debug\AsyncSample.csproj.GenerateResource.cache
+C:\Users\KotikA\Source\Repos\AsyncSample\AsyncSample\obj\Debug\AsyncSample.csproj.CoreCompileInputs.cache
+C:\Users\KotikA\Source\Repos\AsyncSample\AsyncSample\obj\Debug\AsyncSample.exe
+C:\Users\KotikA\Source\Repos\AsyncSample\AsyncSample\obj\Debug\AsyncSample.pdb
+C:\Users\KotikA\Source\Repos\AsyncSample\AsyncSample\obj\Debug\AsyncSample.Form1.resources
+C:\Users\KotikA\Source\Repos\AsyncSample\AsyncSample\obj\Debug\AsyncSample.csprojAssemblyReference.cache
