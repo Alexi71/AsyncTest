@@ -43,9 +43,9 @@ namespace AsyncSample
             }
             //Completion....
         }
-
+         
         private void UpdateUi(int i)
-        {
+        { 
             if (InvokeRequired)
             {
                 BeginInvoke(new Action(() => UpdateUi(i)));
@@ -54,9 +54,12 @@ namespace AsyncSample
             label1.Text = i.ToString();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)   
         {
             _thread.Start();
         }
+
+        
+
     }
 }
