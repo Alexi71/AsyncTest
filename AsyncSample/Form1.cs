@@ -16,7 +16,7 @@ namespace AsyncSample
         private BackgroundWorker _worker;
         private Thread _thread;
         public Form1()
-        {
+        { 
             InitializeComponent();
 
             _thread = new Thread(DoMe);
