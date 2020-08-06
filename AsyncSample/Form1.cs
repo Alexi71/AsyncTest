@@ -32,7 +32,7 @@ namespace AsyncSample
         }
 
         private void DoMe()
-        {
+        {   
             for (int i = 0; i <= 10; i++)
             {
                 lock (this)
