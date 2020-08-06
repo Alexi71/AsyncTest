@@ -25,7 +25,7 @@ namespace AsyncSample
             _worker.ProgressChanged += (sender, args) =>
             {
                 var progress = args.ProgressPercentage;
-                label1.Text = progress.ToString();
+                label1.Text = progress.ToString(); 
             };
 
             //_thread.Start();
