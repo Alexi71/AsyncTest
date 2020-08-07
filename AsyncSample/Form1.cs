@@ -1,65 +1,62 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AsyncSample
 {
     public partial class Form1 : Form
     {
-        private BackgroundWorker _worker;
-        private Thread _thread;
+        //private BackgroundWorker _worker;
+        private Thread _threadDoME;
+
         public Form1()
-        { 
+        {
             InitializeComponent();
 
-            _thread = new Thread(DoMe);
-            _worker = new BackgroundWorker();
-            _worker.WorkerReportsProgress = true;
-            _worker.ProgressChanged += (sender, args) =>
-            {
-                var progress = args.ProgressPercentage;
-                label1.Text = progress.ToString(); 
-            };
-
-            //_thread.Start();
+            _threadDoME = new Thread(DoMe);
+            //_threadtimer = new Thread(timer);
+            //_worker = new BackgroundWorker();
+            //_worker.WorkerReportsProgress = true;
+            //_worker.ProgressChanged += (sender, args) =>
+            //{
+            //    var progress = args.ProgressPercentage;
+            //    label1.Text = progress.ToString(); 
+            //};
+        }
+        private void timer()
+        {
+            var sec = $"{DateTime.Now.Hour}:{DateTime.Now.Minute}:{DateTime.Now.Second}";
+            time.Text = sec;
         }
 
         private void DoMe()
-        {   
-            for (int i = 0; i <= 10; i++)
+        {
+            for (int i = 0; i <= 1000; i++)
             {
                 lock (this)
                 {
-                    UpdateUi(i);
+                    UpdateUiCounter(i);
+                    timer();
                 }
                 Thread.Sleep(100);
             }
             //Completion....
         }
-         
-        private void UpdateUi(int i)
-        { 
+
+        private void UpdateUiCounter(int i)
+        {
             if (InvokeRequired)
             {
-                BeginInvoke(new Action(() => UpdateUi(i)));
+                BeginInvoke(new Action(() => UpdateUiCounter(i)));
                 return;
             }
-            label1.Text = i.ToString();
+            counter.Text = i.ToString();
+            timer();
         }
 
-        private void button1_Click(object sender, EventArgs e)   
+        private void button1_Click(object sender, EventArgs e)
         {
-            _thread.Start();
+            _threadDoME.Start();
         }
-
-        
-
     }
 }

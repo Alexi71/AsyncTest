@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AsyncSample
@@ -16,6 +13,9 @@ namespace AsyncSample
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            //Application.Run(new Form1());
+
+            Application.EnableVisualStyles();
             Application.Run(new Form1());
         }
     }
