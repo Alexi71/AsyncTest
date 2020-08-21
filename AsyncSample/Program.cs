@@ -16,7 +16,7 @@ namespace AsyncSample
             //Application.Run(new Form1());
 
             Application.EnableVisualStyles();
-            Application.Run(new Form1());
+            Application.Run(new Form2());
         }
     }
 }
