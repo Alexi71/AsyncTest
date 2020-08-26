@@ -7,7 +7,7 @@ namespace AsyncSample
     public partial class Form1 : Form
     {
         //private BackgroundWorker _worker;
-        private Thread _threadDo;
+        private Thread _threadDoME;
 
         public Form1()
         {
@@ -31,7 +31,7 @@ namespace AsyncSample
             time.Text = sec;
         }
 
-        private void Do()
+        private void DoMe()
         {
             for (int i = 0; i <= 1000; i++)
             {
@@ -57,7 +57,7 @@ namespace AsyncSample
 
         private void button1_Click(object sender, EventArgs e)
         {
-            _threadDo.Start();
+            _threadDoME.Start();
         }
     }
 }
