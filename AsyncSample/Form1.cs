@@ -13,7 +13,9 @@ namespace AsyncSample
         {
             InitializeComponent();
 
-            _threadDo = new Thread(Do);
+            _threadDoME = new Thread(DoMe);
+
+
             //_threadtimer = new Thread(timer);
             //_worker = new BackgroundWorker();
             //_worker.WorkerReportsProgress = true;
@@ -36,7 +38,6 @@ namespace AsyncSample
                 lock (this)
                 {
                     UpdateUiCounter(i);
-                    timer();
                 }
                 Thread.Sleep(100);
             }
