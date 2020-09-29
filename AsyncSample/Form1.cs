@@ -7,15 +7,15 @@ namespace AsyncSample
     public partial class Form1 : Form
     {
         //private BackgroundWorker _worker;
-        private Thread _threadDo;
-        private Thread _threadclock;
+        private bool _counterIsRunning = false;
+        int Anzahl;
+
 
         public Form1()
         {
             InitializeComponent();
 
-            _threadDo = new Thread(Do);
-            _threadclock = new Thread(timer);
+
 
             //_worker = new BackgroundWorker();
             //_worker.WorkerReportsProgress = true;
@@ -26,7 +26,7 @@ namespace AsyncSample
             //};
         }
 
-        private void timer()
+        private void Timer(object callback)
         {
             while (true)
             {
@@ -50,16 +50,20 @@ namespace AsyncSample
             time.Text = sec.ToString();
         }
 
-        private void Do()
+        private void Count(object callback)
         {
-            for (int i = 0; i <= 100; i++)
-            {
+            for (int i = 0; i <= Anzahl; i++)
+            { 
+                if (!_counterIsRunning)
+                         break;
                 lock (this)
                 {
                     UpdateUiCounter(i);
                 }
-                Thread.Sleep(100);
+                Thread.Sleep(10);
+                
             }
+
             //Completion....
         }
 
@@ -75,8 +79,24 @@ namespace AsyncSample
 
         private void button1_Click(object sender, EventArgs e)
         {
-            _threadDo.Start();
-            _threadclock.Start();
+            _counterIsRunning = true;
+            ThreadPool.QueueUserWorkItem(new WaitCallback(Timer));
+            ThreadPool.QueueUserWorkItem(new WaitCallback(Count));
+            Start.Enabled = false;
+            AnzahlLoops.Enabled = false;
+        }
+
+        private void Reset_Click(object sender, EventArgs e)
+        {
+            _counterIsRunning = false;
+            Thread.Sleep(1000);
+            _counterIsRunning = true;
+            ThreadPool.QueueUserWorkItem(new WaitCallback(Count));            
+        }
+
+        private void AnzahlLoops_TextChanged(object sender, EventArgs e)
+        {
+            Anzahl = int.Parse(AnzahlLoops.Text);           
         }
     }
 }

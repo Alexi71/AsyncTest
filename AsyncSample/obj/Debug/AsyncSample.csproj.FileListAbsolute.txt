@@ -12,9 +12,10 @@ C:\Users\KuhnenS\Documents\c#\Samples\AsyncTest\AsyncSample\bin\Debug\AsyncSampl
 C:\Users\KuhnenS\Documents\c#\Samples\AsyncTest\AsyncSample\bin\Debug\AsyncSample.exe
 C:\Users\KuhnenS\Documents\c#\Samples\AsyncTest\AsyncSample\bin\Debug\AsyncSample.pdb
 C:\Users\KuhnenS\Documents\c#\Samples\AsyncTest\AsyncSample\obj\Debug\AsyncSample.csprojAssemblyReference.cache
-C:\Users\KuhnenS\Documents\c#\Samples\AsyncTest\AsyncSample\obj\Debug\AsyncSample.Form1.resources
 C:\Users\KuhnenS\Documents\c#\Samples\AsyncTest\AsyncSample\obj\Debug\AsyncSample.Properties.Resources.resources
 C:\Users\KuhnenS\Documents\c#\Samples\AsyncTest\AsyncSample\obj\Debug\AsyncSample.csproj.GenerateResource.cache
 C:\Users\KuhnenS\Documents\c#\Samples\AsyncTest\AsyncSample\obj\Debug\AsyncSample.csproj.CoreCompileInputs.cache
 C:\Users\KuhnenS\Documents\c#\Samples\AsyncTest\AsyncSample\obj\Debug\AsyncSample.exe
 C:\Users\KuhnenS\Documents\c#\Samples\AsyncTest\AsyncSample\obj\Debug\AsyncSample.pdb
+C:\Users\KuhnenS\Documents\c#\Samples\AsyncTest\AsyncSample\obj\Debug\AsyncSample.Form2.resources
+C:\Users\KuhnenS\Documents\c#\Samples\AsyncTest\AsyncSample\obj\Debug\AsyncSample.Form1.resources

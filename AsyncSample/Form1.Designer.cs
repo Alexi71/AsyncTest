@@ -28,22 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.Start = new System.Windows.Forms.Button();
             this.counter = new System.Windows.Forms.Label();
             this.time = new System.Windows.Forms.Label();
+            this.Reset = new System.Windows.Forms.Button();
+            this.AnzahlLoops = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // button1
+            // Start
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(338, 233);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(135, 73);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Zimti";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.Start.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Start.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Start.Location = new System.Drawing.Point(129, 237);
+            this.Start.Name = "Start";
+            this.Start.Size = new System.Drawing.Size(135, 73);
+            this.Start.TabIndex = 0;
+            this.Start.Text = "Start";
+            this.Start.UseVisualStyleBackColor = false;
+            this.Start.Click += new System.EventHandler(this.button1_Click);
             // 
             // counter
             // 
@@ -67,14 +69,37 @@
             this.time.TabIndex = 2;
             this.time.Text = "time";
             // 
+            // Reset
+            // 
+            this.Reset.BackColor = System.Drawing.Color.Sienna;
+            this.Reset.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Reset.Location = new System.Drawing.Point(412, 237);
+            this.Reset.Name = "Reset";
+            this.Reset.Size = new System.Drawing.Size(113, 73);
+            this.Reset.TabIndex = 0;
+            this.Reset.Text = "Reset";
+            this.Reset.UseVisualStyleBackColor = false;
+            this.Reset.Click += new System.EventHandler(this.Reset_Click);
+            // 
+            // AnzahlLoops
+            // 
+            this.AnzahlLoops.Location = new System.Drawing.Point(365, 123);
+            this.AnzahlLoops.Name = "AnzahlLoops";
+            this.AnzahlLoops.Size = new System.Drawing.Size(100, 20);
+            this.AnzahlLoops.TabIndex = 4;
+            this.AnzahlLoops.TextChanged += new System.EventHandler(this.AnzahlLoops_TextChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Snow;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.AnzahlLoops);
+            this.Controls.Add(this.Reset);
             this.Controls.Add(this.time);
             this.Controls.Add(this.counter);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Start);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -84,9 +109,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Start;
         private System.Windows.Forms.Label counter;
         private System.Windows.Forms.Label time;
+        private System.Windows.Forms.Button Reset;
+        private System.Windows.Forms.TextBox AnzahlLoops;
     }
 }
 
